@@ -1,3 +1,3 @@
-# test file
+readme
 
-This is a test file and this is only fill up text.
+run the bookletAssignment file type: python3 bookletAssignment.py in your terminal

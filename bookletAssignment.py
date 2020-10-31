@@ -1,4 +1,4 @@
-Name: Keremsah K.
+print("""Name: Keremsah K.
 Studentnr: 500694326
 Study: Digital Driven Business
 Level: Master
@@ -38,5 +38,4 @@ From the terminal the inital SQL can be called by: psql test -f RecommendationsS
 3. Results 300 with title (see topRecommendations300Title.csv)
 Again, 0 results were given by the RS. Probably due to the name of the movie.
 
-From the terminal the inital SQL can be called by: psql test -f RecommendationsTitle300.sql
-
+From the terminal the inital SQL can be called by: psql test -f RecommendationsTitle300.sql""")
