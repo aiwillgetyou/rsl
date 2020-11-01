@@ -31,6 +31,7 @@ positivity text,
 objectivity text);''')
 conn.commit()
 
-cur.execute('''\copy authorRecommend FROM ‘/home/pi/rsl/finalRecommend.csv’ delimiter ‘;’ csv header;''')
+cur.execute("copy authorRecommend FROM '/home/pi/rsl/finalRecommend.csv' delimiter ';' csv header;")
+conn.commit()
 
 print("--- %s seconds ---" % (time.time() - start_time))
