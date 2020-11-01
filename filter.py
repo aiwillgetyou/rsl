@@ -17,6 +17,8 @@ authorReview = data[data['movieName']=='arrival']
 
 #export authors favorite movies
 authorReview.to_csv(r'/home/pi/rsl/authorReview.csv', sep = ';', index = False)
+
+print("There are %d Authors that reviewed my favorite movie Arrival" % (len(authorReview.index)))
 #iterate through the range of the number of authors of my favorite movies
 for i in range(len(authorReview)):
     #subset of the index values of all the occurences of the authors of my favorite movie in the dataset
@@ -38,10 +40,13 @@ for i in range(len(authorReview)):
 
 #shuffle columns
 authorRecommend = authorRecommend[['movieName','Metascore_w','diff','Author','Summary']]
+print("The %d authors that review my favorite movie rated together %d movies with a rating that is greater than they gave my favorite movie Arrival" % (len(authorReview.index), len(authorRecommend.index)))
 
 #review by authors from my favorite movie of other movies
 authorRecommend.sort_values(['diff'], ascending=False)
 authorRecommend.drop_duplicates(subset = 'movieName', keep = 'first', inplace=True)
 authorRecommend.to_csv(r'/home/pi/rsl/authorRecommend.csv', sep = ';', index = False)
+print("End script")
 print("--- %s seconds ---" % (time.time() - start_time))
+
 # 142 seconds
